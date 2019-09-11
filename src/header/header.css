@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #FAFAFA;
+    font-size: 1.5vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    height: 8vh;
+    background: white;
+    padding: 1vh 20vw 1vh 20vw;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mobileHeader {
+    padding: 1vh 1vw 1vh 1vw; 
+}
+
+#logoHeader {
+    height: 95%;
+}
+
+.navbar li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.navbar svg {
+    margin-right: 1em;
+}
+
+.navbar img {
+    height: 4vh;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 0.80em;
+}
+
+.hide {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+ }
+
+ a {
+    color: #355070;
+ }

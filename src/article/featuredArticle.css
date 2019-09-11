@@ -1,0 +1,61 @@
+.big {
+    width: 30vw;
+    height: 31vw;
+    margin: 0 1vw 0 1vw;
+}
+
+.small {
+    width: 30vw;
+    height: 15vw;
+    margin-bottom: 1vw;
+}
+
+.article-head {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+.big > .article-head {
+    width: 100%;
+    height: 70%;
+}
+
+.small > .article-head {
+    width: 100%;
+    height: 100%;
+}
+
+.article-head h2 {
+   position: absolute;
+   bottom: 0px;
+   left: 10px;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: bold;
+   font-size: 1.5em;
+   color:   #FAFAFA;
+   text-shadow: grey 0.1em 0.1em 0.2em;
+}
+
+.article-foot h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+    margin-top: 0px;
+}
+
+.article-foot p {
+    margin: 0;
+    font-size: 0.7em;
+    color: white;
+}
+
+.article-foot {
+    width: 100%;
+    height: 30%;
+    background: #E56B6F;
+    box-sizing: border-box;
+    padding: 10px 10px 10px 10px;
+}
