@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import './App.css'
 
-import Header from './Header'
-import FeaturedArticle from './FeaturedArticle'
+import Header from './header/Header'
+import FeaturedArticle from './article/FeaturedArticle'
+import Event from './event/Event'
 
 class App extends Component {
 	render() {
@@ -10,14 +11,25 @@ class App extends Component {
 			<body>
 				<Header logoPath="public\email.svg" />
 				<div className="container grey">
+					<div id="events">
+						<Event/>
+						<Event/>
+					</div>
+
+					<hr/>
+
 					<section id="featured-articles">
-						<FeaturedArticle path="https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg" type="big">
-							I have some blocks that I want to layout individually on the page, however I also want them to update when the browser window changes. The very end result will be something like Ben Holland's Pinterest layout, but written using React not just jQuery. I’m still a way off.
+						<FeaturedArticle path="https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg">
+							I have some blocks that I want to layout individually on the page, however I also want them to update wh...
               			</FeaturedArticle>
-						<div>
-							<FeaturedArticle path="https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_30607.jpg" type="small" />
-							<FeaturedArticle path="https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_30607.jpg" type="small" />
-						</div>
+
+						<FeaturedArticle path="https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg">
+							I have some blocks that I want to layout individually on the page, however I also want them to update wh...
+              			</FeaturedArticle>
+
+						<FeaturedArticle path="https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg">
+							I have some blocks that I want to layout individually on the page, however I also want them to update wh...
+              			</FeaturedArticle>
 					</section>
 				</div>
 

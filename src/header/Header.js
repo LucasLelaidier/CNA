@@ -43,6 +43,7 @@ class Header extends React.Component {
 
     componentDidMount() {
         feather.replace()
+        this.needResize();
     }
 
     render () {
@@ -53,9 +54,7 @@ class Header extends React.Component {
                 <a href="e"><li> <span> Acceuil </span> </li></a>
                 <a href="e"><li> <span> Le club </span> </li></a>
                 <a href="e"><li> <span> Activités </span> </li></a>
-                <a href="e"><li> <span> Evènements </span> </li></a>
-                <a href="e"><li> <span> Médiats </span> </li></a>
-                <a href="e"><li> <span> Contact </span> </li></a>
+                <a href="e"><li> <span> articles </span> </li></a>
             </ul>
 
             <ul ref={this.logoNavbar} className={`navbar ${this.state.size === 2 ? "" : " hide"}`}> 
@@ -63,8 +62,6 @@ class Header extends React.Component {
                 <a href="a"><li> <i data-feather="shield"></i> </li></a>
                 <a href="a"><li> <i data-feather="award"></i> </li></a>
                 <a href="a"><li> <i data-feather="circle"></i> </li></a>
-                <a href="a"><li> <i data-feather="image"></i> </li></a>
-                <a href="a"><li> <i data-feather="mail"></i> </li></a>
             </ul>
             <ReactResizeDetector handleWidth handleHeight onResize={this.needResize} />
         </header>

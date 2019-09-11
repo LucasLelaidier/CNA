@@ -26,40 +26,19 @@ class FeaturedArticle extends React.Component {
         }
     }
 
-    componentDidMount() {
-        this.shortenText("... Lire plus");
-    }
-
-    componentDidUpdate() {
-        this.shortenText("... Lire plus");
-    }
-
-    onResize = () => {
-        this.shortenText("... Lire plus");
-      }
-
     render () {
-        if(this.props.type === "big") {
-            return <article className="big">
-                <div className="article-head" style={{backgroundImage: `url(${this.props.path})`}}>
-                    
-                </div>
-                <div ref={this.footer} className="article-foot">
-                    <h2 className="title"> Compétition du 25 juin </h2>
-                    <p ref={this.description}>
-                        {this.props.children}
-                    </p>
-                    <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
-                </div>
-            </article>
-        } else {
-            return <article className="small">
-                <div className="article-head" style={{backgroundImage: `url(${this.props.path})`}}>
-                    <h2 className="title"> Compétition du 25 juin </h2>
-                </div>
-            </article>
-            
-        }
+        return <article className="article">
+            <div className="article-head" style={{backgroundImage: `url(${this.props.path})`}}>
+                
+            </div>
+            <div ref={this.footer} className="article-foot">
+                <h2 className="title"> Compétition du 25 juin </h2>
+                <p ref={this.description}>
+                    {this.props.children}
+                </p>
+                <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
+            </div>
+        </article>
     }
 }
 

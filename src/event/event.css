@@ -1,0 +1,19 @@
+.event {
+    display: flex;
+    align-items: center;
+    margin: 0 2vw 5vh 2vw;
+}
+
+.event-image {
+    color:#E56B6F;
+    width: 59px;
+    height: 59px;
+
+    margin: 10px;
+}
+
+.event p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 15vw;
+}
