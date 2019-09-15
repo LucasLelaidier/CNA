@@ -1,0 +1,10 @@
+@media only screen and (max-device-width : 640px) {
+    .event {
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+    }
+    
+    .event p {
+        width: 60vw;
+    }
+}

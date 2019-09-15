@@ -1,5 +1,6 @@
 import React from 'react'
 import './presentationCard.css'
+import './presentationCardMobile.css'
 
 class PresentationCard extends React.Component {
     render () {

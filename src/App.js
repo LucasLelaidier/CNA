@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import './appMobile.css'
 
 import Header from './header/Header'
 import FeaturedArticle from './article/FeaturedArticle'
@@ -60,16 +61,16 @@ class App extends Component {
 
 				<div className="container grey">
 					<section id="cards">
-						<PresentationCard path="https://abcnatation.fr/files/club-190503090/actualites/actualite_24016.jpeg" title="Nous joindre">
+						<PresentationCard path="/illustrations/joindre.jpeg" title="Nous joindre">
 							Retrouvez toutes les informations utiles pour nous contacter !
 						</PresentationCard>
 
-						<PresentationCard path="https://abcnatation.fr/files/club-190503090/actualites/actualite_24016.jpeg" title="Nous joindre">
-							Retrouvez toutes les informations utiles pour nous contacter !
+						<PresentationCard path="/illustrations/rejoindre.jpg" title="Rejoindre le club">
+							Vous souhaitez rejoindre le club ? Retrouvez ici toutes les activités que nous proposons. 
 						</PresentationCard>
 
-						<PresentationCard path="https://abcnatation.fr/files/club-190503090/actualites/actualite_24016.jpeg" title="Nous joindre">
-							Retrouvez toutes les informations utiles pour nous contacter !
+						<PresentationCard path="/illustrations/resultats.jpg" title="Voir mes résultats">
+							Vous avez participé à une compétition ? Retrouvez vos résultats ici.
 						</PresentationCard>
 					</section>
 				</div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import './event.css'
+import './eventMobile.css'
 import feather from 'feather-icons'
 
 class Event extends React.Component {

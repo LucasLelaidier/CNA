@@ -1,0 +1,21 @@
+@media only screen and (max-device-width : 640px) {
+    .presentation-card {
+        width: 100%;
+        background: none;
+        box-shadow: none;
+    }
+
+    .card-head {
+        height: 18vh;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        margin: 0;
+        border-radius: 12px;
+    }
+
+    .presentation-card button {
+        width: 100%;
+        height: 38px;
+    }
+}

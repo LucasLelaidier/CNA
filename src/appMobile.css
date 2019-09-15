@@ -1,0 +1,6 @@
+@media only screen and (max-device-width : 640px) {
+    .container {
+        padding: 5vh 16px 5vh 16px;
+        margin: auto;
+    }
+}

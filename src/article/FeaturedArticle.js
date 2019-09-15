@@ -1,5 +1,6 @@
 import React from 'react'
 import './featuredArticle.css'
+import './featuredArticleMobile.css'
 import ReactResizeDetector from 'react-resize-detector';
 
 class FeaturedArticle extends React.Component {

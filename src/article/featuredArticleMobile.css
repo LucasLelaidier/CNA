@@ -1,0 +1,14 @@
+@media only screen and (max-device-width : 640px) {
+    .article {
+        width: 100%;
+        margin-bottom: 5vh;
+    }
+
+    .article-head {
+        border-radius: 12px;
+    }
+
+    .article-foot h2 {
+        text-align: center;
+    }
+}
