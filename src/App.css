@@ -13,9 +13,13 @@ section {
     justify-content: center;
 }
 
-#featured-articles {
+#featured-articles, #cards {
     display: flex;
     flex-wrap: wrap;
+}
+
+#cards {
+    margin: 10vh 0 10vh 0;
 }
 
 .fill {

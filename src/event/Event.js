@@ -9,8 +9,8 @@ class Event extends React.Component {
     }
 
     render() {
-        return <div class="event">
-            <i class="event-image" data-feather="alert-circle"></i>
+        return <div className="event">
+            <i className="event-image" data-feather="alert-circle"></i>
             <p>
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
             </p>

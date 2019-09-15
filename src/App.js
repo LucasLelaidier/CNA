@@ -4,6 +4,8 @@ import './App.css'
 import Header from './header/Header'
 import FeaturedArticle from './article/FeaturedArticle'
 import Event from './event/Event'
+import PresentationCard from './presentationCard/PresentationCard'
+import Footer from './footer/Footer'
 
 class App extends Component {
 	render() {
@@ -56,11 +58,23 @@ class App extends Component {
 					</div>
 				</div>
 
-				<div className="container grey fill">
-					<div id="fill">
+				<div className="container grey">
+					<section id="cards">
+						<PresentationCard path="https://abcnatation.fr/files/club-190503090/actualites/actualite_24016.jpeg" title="Nous joindre">
+							Retrouvez toutes les informations utiles pour nous contacter !
+						</PresentationCard>
 
-					</div>
+						<PresentationCard path="https://abcnatation.fr/files/club-190503090/actualites/actualite_24016.jpeg" title="Nous joindre">
+							Retrouvez toutes les informations utiles pour nous contacter !
+						</PresentationCard>
+
+						<PresentationCard path="https://abcnatation.fr/files/club-190503090/actualites/actualite_24016.jpeg" title="Nous joindre">
+							Retrouvez toutes les informations utiles pour nous contacter !
+						</PresentationCard>
+					</section>
 				</div>
+
+				<Footer />
 			</body>
 		)
 	}
