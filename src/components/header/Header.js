@@ -51,10 +51,20 @@ class Header extends React.Component {
             <img alt="logo" ref={this.logo} id="logoHeader" src={process.env.PUBLIC_URL + '/logoCNA_full.svg'}/>
 
             <ul ref={this.textNavbar} className={`navbar ${this.state.size === 3 ? "" : " hide"}`}> 
-                <a href="e"><li> <span> Acceuil </span> </li></a>
-                <a href="e"><li> <span> Le club </span> </li></a>
-                <a href="e"><li> <span> Activités </span> </li></a>
-                <a href="e"><li> <span> articles </span> </li></a>
+                <li> <a href="e"> Acceuil </a> </li>      
+                <li> 
+                    <a href="e"> Le club </a>
+                </li>
+                <li>
+                    Activités 
+                    <ul className="dropdown">
+                        <li> <a href="e">Natation de course</a> </li>
+                        <li> <a href="e">Groupe maître</a> </li>
+                        <li> <a href="e">Groupe loisir</a> </li>
+                        <li> <a href="e">Aquagym</a> </li>
+                    </ul>
+                </li>
+                <li> <a href="e">articles </a> </li>
             </ul>
 
             <ul ref={this.logoNavbar} className={`navbar ${this.state.size === 2 ? "" : " hide"}`}> 
@@ -63,7 +73,7 @@ class Header extends React.Component {
                 <a href="a"><li> <i data-feather="award"></i> </li></a>
                 <a href="a"><li> <i data-feather="circle"></i> </li></a>
             </ul>
-            <ReactResizeDetector handleWidth handleHeight onResize={this.needResize} />
+            
         </header>
     }
 }
