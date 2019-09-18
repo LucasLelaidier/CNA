@@ -58,7 +58,17 @@ class Header extends React.Component {
                 <li>
                     Activités 
                     <ul className="dropdown">
-                        <li> <a href="e">Natation de course</a> </li>
+                        <li> 
+                            <a href="e"> Natation de course </a>
+                            
+
+                            <ul className="dropdown side">
+                                <li> <a href="e"> Avenir </a> </li>
+                                <li> <a href="e"> Departement </a> </li>
+                                <li> <a href="e"> District </a> </li>
+                                <li> <a href="e"> Aquagym </a> </li>
+                            </ul>
+                        </li>
                         <li> <a href="e">Groupe maître</a> </li>
                         <li> <a href="e">Groupe loisir</a> </li>
                         <li> <a href="e">Aquagym</a> </li>

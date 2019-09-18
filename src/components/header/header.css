@@ -76,11 +76,16 @@ header {
     position: absolute;
     transition: all 0.5s ease;
     left: 0;
-    top: 10vh;
+    top: 100%;
     display: none;
     background: white;
     padding: 1vw 0 1vw 0;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12)
+}
+
+.side {
+    left: 100%;
+    top: -100%;
 }
 
 .dropdown li {
@@ -88,6 +93,7 @@ header {
     font-weight: normal;
     font-size: 14px;
     padding: 3px 2vw 3px 2vw;
+    margin: 0;
 }
 
 .dropdown li:hover {
