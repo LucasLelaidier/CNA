@@ -1,0 +1,59 @@
+.presentations {
+    display: flex;
+}
+
+.presentation {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+    padding: 3vw;
+    width: 45%;
+    display: inline-block;
+    margin: 0 5px 0 5px;
+}
+
+.presentation h2 {
+    font-size: 20px;
+    color: #E56B6F;
+}
+
+.presentation p {
+    font-size: 14px;
+}
+
+.horaires {
+    font-size: 14px; 
+    list-style: none;
+}
+
+.horaires li {
+    margin-top: 10px;
+}
+
+.centered {
+    text-align: center;
+    padding: 0;
+}
+
+.associated {
+    display: flex;
+}
+
+.associated .element {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+    font-size: 14px;
+    height: 7vh;
+    padding: 0 3vw 0 2vw;
+    line-height: 7vh;
+    position: relative;
+    margin: 0 2vw 0 0;
+}
+
+.associated .element .chevron {
+    position: absolute;
+    left: 80%;
+    top: 35%;
+    color: #909090;
+}
