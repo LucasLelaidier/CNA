@@ -100,6 +100,14 @@ header {
     background: #FAFAFA;
 }
 
+.chevron {
+    height: 14px;
+    color:  909090;
+    vertical-align: center;
+    position: absolute;
+    left: 85%;
+}
+
 .navbar li:hover > .dropdown,
 .navbar li:focus-within > .dropdown,
 .navbar li .dropdown:hover {

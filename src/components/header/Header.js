@@ -60,8 +60,7 @@ class Header extends React.Component {
                     <ul className="dropdown">
                         <li> 
                             <a href="e"> Natation de course </a>
-                            
-
+                            <i className="chevron" data-feather="chevron-right"></i>
                             <ul className="dropdown side">
                                 <li> <a href="e"> Avenir </a> </li>
                                 <li> <a href="e"> Departement </a> </li>
@@ -69,7 +68,7 @@ class Header extends React.Component {
                                 <li> <a href="e"> Aquagym </a> </li>
                             </ul>
                         </li>
-                        <li> <a href="e">Groupe maître</a> </li>
+                        <li> <a href="e">Groupe maître</a> <i className="chevron" data-feather="chevron-right"></i></li>
                         <li> <a href="e">Groupe loisir</a> </li>
                         <li> <a href="e">Aquagym</a> </li>
                     </ul>
