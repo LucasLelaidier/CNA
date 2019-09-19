@@ -51,9 +51,35 @@
     margin: 0 2vw 0 0;
 }
 
+.associated .element:hover > .chevron {
+    animation-duration: 2s;
+    animation-name: floating;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.associated .element:hover {
+    color: #E56B6F;
+    cursor: pointer;
+}
+
 .associated .element .chevron {
     position: absolute;
     left: 80%;
     top: 35%;
     color: #909090;
+}
+
+@keyframes floating {
+    0% {
+        left: 80%;
+    }
+
+    50% {
+        left: 75%;
+    }
+
+    100% {
+        left: 80%;
+    }
 }
