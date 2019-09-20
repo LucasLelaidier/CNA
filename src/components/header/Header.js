@@ -52,9 +52,7 @@ class Header extends React.Component {
 
             <ul ref={this.textNavbar} className={`navbar ${this.state.size === 3 ? "" : " hide"}`}> 
                 <li> <a href="e"> Acceuil </a> </li>      
-                <li> 
-                    <a href="e"> Le club </a>
-                </li>
+                <a href="e"> <li> Le club </li></a>
                 <li>
                     Activités 
                     <ul className="dropdown">
@@ -62,10 +60,10 @@ class Header extends React.Component {
                             <a href="e"> Natation de course </a>
                             <i className="chevron" data-feather="chevron-right"></i>
                             <ul className="dropdown side">
-                                <li> <a href="/groupe-avenir"> Avenir </a> </li>
-                                <li> <a href="e"> Departement </a> </li>
-                                <li> <a href="e"> District </a> </li>
-                                <li> <a href="e"> Aquagym </a> </li>
+                                <a href="/groupe-avenir"><li>  Avenir </li> </a>
+                                <a href="e"> <li> Departement </li></a>
+                                <a href="e"> <li> District </li></a>
+                                <a href="e"> <li> Aquagym </li></a>
                             </ul>
                         </li>
                         <li> <a href="e">Groupe maître</a> <i className="chevron" data-feather="chevron-right"></i></li>
