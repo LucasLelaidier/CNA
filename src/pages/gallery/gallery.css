@@ -1,0 +1,42 @@
+.albums {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.album {
+    width: 18%;
+    height: 10vh;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    position: relative;
+    margin-right: 2%;
+}
+
+.album h2 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.album .dl-icon {
+    position: absolute;
+    left: 85%;
+    top: 75%;
+    color: #909090;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.images .image {
+    width: 32%;
+    padding-bottom: 30%;
+    margin-bottom: 2vh;
+    background-size: cover;
+    background-position: center;
+}
