@@ -12,6 +12,7 @@
     padding: 20px;
     position: relative;
     margin-right: 2%;
+    overflow: hidden;
 }
 
 .album h2 {
@@ -25,6 +26,14 @@
     left: 85%;
     top: 75%;
     color: #909090;
+}
+
+.more-link {
+    float: right;
+    color: #E56B6F;
+    font-size: 20px;
+    cursor: pointer;
+    padding-top: 2vh;
 }
 
 .images {

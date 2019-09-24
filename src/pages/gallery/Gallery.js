@@ -29,6 +29,8 @@ class GroupeAvenir extends Component {
                             <i className="dl-icon" data-feather="download"></i>
                         </div>
                     </section>
+                    <a className="more-link" href="/e"> Voir tous les albums </a>
+
 
                     <h1> Dernières photos </h1>
 
