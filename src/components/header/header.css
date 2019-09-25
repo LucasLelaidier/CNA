@@ -1,17 +1,26 @@
 header {
     height: 10vh;
     background: white;
-    padding: 1vh 20vw 1vh 20vw;
-
-    display: flex;
+    padding: 1vh 0 1vh 0;
+    width: 100%;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 
-    position:relative;
+    position: relative;
     z-index: 999;
+}
+
+.header-content {
+    height: 10vh;
+    margin: auto;
+    max-width: 1194px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left, .right {
+    width: 50%;
+    height: 100%;
 }
 
 .mobileHeader {
@@ -19,7 +28,11 @@ header {
 }
 
 #logoHeader {
-    height: 95%;
+    height: 100%;
+}
+
+.navbar {
+    float: right;
 }
 
 .navbar li {

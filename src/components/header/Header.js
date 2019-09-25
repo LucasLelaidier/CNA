@@ -4,83 +4,39 @@ import feather from 'feather-icons'
 import './header.css'
 
 class Header extends React.Component {
-    lastPadding = 0;
-
-    constructor(props) {
-        super(props);
-        
-        this.state = { size: 3 };
-        this.logo = React.createRef();
-        this.textNavbar = React.createRef();
-        this.logoNavbar = React.createRef();
-        this.headerDiv = React.createRef(); 
-    }
-
-    needResize = () => {
-        let styles = window.getComputedStyle(this.headerDiv.current);
-        let padding = parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight);
-
-        let logoSize = this.logo.current.offsetWidth;
-        let textNavbarSize = this.textNavbar.current.offsetWidth;
-        let logoNavbarSize = this.logoNavbar.current.offsetWidth;
-
-        if(logoSize + textNavbarSize < this.headerDiv.current.offsetWidth - padding - 60) {
-            this.setState({
-                size: 3
-            });
-        } else {
-            if(logoSize + logoNavbarSize < this.headerDiv.current.offsetWidth - padding - 60) {
-                this.setState({
-                    size: 2
-                });
-            } else {
-                this.setState({
-                    size: 1
-                });
-            }
-        }
-    }
-
-    componentDidMount() {
-        feather.replace()
-        this.needResize();
-    }
-
     render () {
-        return <header ref={this.headerDiv} className={`header ${this.state.size === 1 ? "mobileHeader" : ""}`}>
-            <img alt="logo" ref={this.logo} id="logoHeader" src={process.env.PUBLIC_URL + '/logoCNA_full.svg'}/>
+        return <header className="header">
+            <div className="header-content">
+                <div className="left">
+                    <img alt="logo" id="logoHeader" src={process.env.PUBLIC_URL + '/logoCNA_full.svg'}/>
+                </div>
 
-            <ul ref={this.textNavbar} className={`navbar ${this.state.size === 3 ? "" : " hide"}`}> 
-                <li> <a href="e"> Acceuil </a> </li>      
-                <a href="e"> <li> Le club </li></a>
-                <li>
-                    Activités 
-                    <ul className="dropdown">
-                        <li> 
-                            <a href="e"> Natation de course </a>
-                            <i className="chevron" data-feather="chevron-right"></i>
-                            <ul className="dropdown side">
-                                <a href="/groupe-avenir"><li>  Avenir </li> </a>
-                                <a href="e"> <li> Departement </li></a>
-                                <a href="e"> <li> District </li></a>
-                                <a href="e"> <li> Aquagym </li></a>
+                <div className="right">
+                    <ul className="navbar"> 
+                        <li> <a href="e"> Acceuil </a> </li>      
+                        <a href="e"> <li> Le club </li></a>
+                        <li>
+                            Activités 
+                            <ul className="dropdown">
+                                <li> 
+                                    <a href="e"> Natation de course </a>
+                                    <i className="chevron" data-feather="chevron-right"></i>
+                                    <ul className="dropdown side">
+                                        <a href="/groupe-avenir"><li>  Avenir </li> </a>
+                                        <a href="e"> <li> Departement </li></a>
+                                        <a href="e"> <li> District </li></a>
+                                        <a href="e"> <li> Aquagym </li></a>
+                                    </ul>
+                                </li>
+                                <li> <a href="e">Groupe maître</a> <i className="chevron" data-feather="chevron-right"></i></li>
+                                <li> <a href="e">Groupe loisir</a> </li>
+                                <li> <a href="e">Aquagym</a> </li>
                             </ul>
                         </li>
-                        <li> <a href="e">Groupe maître</a> <i className="chevron" data-feather="chevron-right"></i></li>
-                        <li> <a href="e">Groupe loisir</a> </li>
-                        <li> <a href="e">Aquagym</a> </li>
+                        <li> <a href="e">articles </a> </li>
                     </ul>
-                </li>
-                <li> <a href="e">articles </a> </li>
-            </ul>
-
-            <ul ref={this.logoNavbar} className={`navbar ${this.state.size === 2 ? "" : " hide"}`}> 
-                <a href="a"><li> <i data-feather="home"></i> </li></a>
-                <a href="a"><li> <i data-feather="shield"></i> </li></a>
-                <a href="a"><li> <i data-feather="award"></i> </li></a>
-                <a href="a"><li> <i data-feather="circle"></i> </li></a>
-            </ul>
-            
+                </div>
+            </div>
         </header>
     }
 }
