@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #FAFAFA;
+    font-size: 1.5vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    padding: 5vh 0 5vh 0;
+    margin: auto;
+    max-width: 1194px;
+}
+
+.white {
+    background: white;
+}
+
+.grey {
+    background: #FAFAFA;
+}
+
+section {
+    width: 100%;
+    padding: auto;
+    justify-content: center;
+}
