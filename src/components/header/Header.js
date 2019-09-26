@@ -28,7 +28,7 @@ class Header extends React.Component {
                                         <a href="e"> <li> Aquagym </li></a>
                                     </ul>
                                 </li>
-                                <li> <a href="e">Groupe maître</a> <i className="chevron" data-feather="chevron-right"></i></li>
+                                <li> <a href="e">Groupe maître</a> </li>
                                 <li> <a href="e">Groupe loisir</a> </li>
                                 <li> <a href="e">Aquagym</a> </li>
                             </ul>
