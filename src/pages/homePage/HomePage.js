@@ -14,7 +14,7 @@ class HomePage extends Component {
 		return (
 			<body>
 				<Header logoPath="public\email.svg" />
-				<div class="stray grey">
+				<div className="stray grey">
 					<div className="container">
 						<div id="events">
 							<Event/>
@@ -39,7 +39,7 @@ class HomePage extends Component {
 					</div>
 				</div>
 
-				<div class="stray white">
+				<div className="stray white">
 					<div className="container white">
 						<div className="sponsor-section">
 							<h1> Ils nous soutiennent : </h1>

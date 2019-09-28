@@ -1,12 +1,12 @@
 .presentation-card {
-    width: 29%;
-    margin: 0 1vw 0 1vw;
+    width: 335px;
     background: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16)
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+    margin: 21px 21px 21px 21px;
 }
 
 .card-head {
-    height: 18vh;
+    height: 140px;
     background-size: cover;
     background-position: center;
     width: 100%;
