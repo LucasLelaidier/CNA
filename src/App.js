@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import feather from 'feather-icons'
-import MainRouter from './routes'
+
 import './global.css'
+
+import MainRouter from './routes'
 
 class App extends Component {
 	componentDidMount() {
@@ -9,8 +11,9 @@ class App extends Component {
     }
 	
 	render() {
-		return (
-			<MainRouter />
+		return (<div>
+				<MainRouter />
+			</div>
 		)
 	}
 }

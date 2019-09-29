@@ -1,5 +1,6 @@
 import React from 'react'
 import './header.css'
+import { Link } from "react-router-dom";
 
 class Header extends React.Component {
     render () {
@@ -12,7 +13,7 @@ class Header extends React.Component {
 
                     <div className="right">
                         <ul className="navbar"> 
-                            <li> <a href="e"> Acceuil </a> </li>      
+                            <li> <Link to="/"> Acceuil </Link> </li>      
                             <a href="e"> <li> Le club </li></a>
                             <li>
                                 Activités 
@@ -21,7 +22,7 @@ class Header extends React.Component {
                                         <a href="e"> Natation de course </a>
                                         <i className="chevron" data-feather="chevron-right"></i>
                                         <ul className="dropdown side">
-                                            <a href="/groupe-avenir"><li>  Avenir </li> </a>
+                                            <Link to="/groupe-avenir"><li> Avenir </li> </Link>
                                             <a href="e"> <li> Departement </li></a>
                                             <a href="e"> <li> District </li></a>
                                             <a href="e"> <li> Aquagym </li></a>
@@ -37,7 +38,7 @@ class Header extends React.Component {
                     </div>
                 </div>
             </header>
-            <div class="important">
+            <div className="important">
                 <span> Les réinscriptions 2019 se terminent le 20 septembre ! </span>
                 <i className="close" data-feather="x"></i>
             </div>

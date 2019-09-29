@@ -3,17 +3,14 @@ import React, { Component } from 'react'
 import './homePage.css'
 import './homePageMobile.css'
 
-import Header from 'components/header/Header'
 import FeaturedArticle from 'components/article/FeaturedArticle'
 import Event from 'components/event/Event'
 import PresentationCard from 'components/presentationCard/PresentationCard'
-import Footer from 'components/footer/Footer'
 
 class HomePage extends Component {
 	render() {
 		return (
 			<body>
-				<Header logoPath="public\email.svg" />
 				<div className="stray grey">
 					<div className="container">
 						<div id="events">
@@ -81,7 +78,6 @@ class HomePage extends Component {
 						</section>
 					</div>
 				</div>
-				<Footer />
 			</body>
 		)
 	}

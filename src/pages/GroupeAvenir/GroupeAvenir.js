@@ -1,15 +1,10 @@
 import React, { Component } from 'react'
 import './groupeAvenir.css'
 
-import Header from 'components/header/Header'
-import Footer from 'components/footer/Footer'
-
 class GroupeAvenir extends Component {
 	render() {
 		return (
             <body>
-                <Header logoPath="public\email.svg" />
-                
                 <div className="stray grey">
                     <div className="container">
                         <h1> Natation de course - Groupe Avenir </h1>
@@ -68,7 +63,6 @@ class GroupeAvenir extends Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
             </body>
         )
     }

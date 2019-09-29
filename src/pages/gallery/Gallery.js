@@ -2,15 +2,10 @@ import React, { Component } from 'react'
 import './gallery.css'
 import './galleryMobile.css'
 
-import Header from 'components/header/Header'
-import Footer from 'components/footer/Footer'
-
 class GroupeAvenir extends Component {
 	render() {
 		return (
             <body>
-                <Header logoPath="public\email.svg" />
-
                 <div className="stray grey">
                     <div className="container">
                         <h1> Albums </h1>
@@ -51,7 +46,6 @@ class GroupeAvenir extends Component {
                         </section>
                     </div>
                 </div>
-                <Footer />
             </body>
         )
     }
