@@ -30,22 +30,8 @@
     filter: none;
 }
 
-h1 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #E56B6F;
-    margin: 5vh 0 5vh 0;
-}
-
 #events {
     display: flex;
     width: 100%;
     justify-content: center;
-}
-
-hr {
-    margin: auto;
-    margin-bottom: 5vh;
-    width: 75%;
-    color: #707070;
 }

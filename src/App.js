@@ -1,15 +1,10 @@
 import React, { Component } from 'react'
-import feather from 'feather-icons'
 
 import './global.css'
 
 import MainRouter from './routes'
 
 class App extends Component {
-	componentDidMount() {
-        feather.replace();
-    }
-	
 	render() {
 		return (<div>
 				<MainRouter />
@@ -18,4 +13,4 @@ class App extends Component {
 	}
 }
 
-export default App
+export default App;

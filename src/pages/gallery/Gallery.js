@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+
+import feather from 'feather-icons'
+
 import './gallery.css'
 import './galleryMobile.css'
 
 class GroupeAvenir extends Component {
+    componentDidMount() {
+        feather.replace();
+    }
+
 	render() {
 		return (
             <body>

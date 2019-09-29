@@ -37,7 +37,15 @@
 }
 
 .associated {
+    padding: 6px;
     display: flex;
+    overflow: scroll;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.associated::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
 }
 
 .associated .element {
@@ -46,7 +54,7 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
     font-size: 14px;
     height: 7vh;
-    padding: 0 3vw 0 2vw;
+    padding: 0 90px 0 55px;
     line-height: 7vh;
     position: relative;
     margin: 0 2vw 0 0;

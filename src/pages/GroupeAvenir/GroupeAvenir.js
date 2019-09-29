@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
+import feather from 'feather-icons'
+
 import './groupeAvenir.css'
 
 class GroupeAvenir extends Component {
+    componentDidMount() {
+        feather.replace();
+    }
+
 	render() {
 		return (
             <body>

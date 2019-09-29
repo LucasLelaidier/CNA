@@ -25,3 +25,17 @@ section {
     padding: auto;
     justify-content: center;
 }
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #E56B6F;
+    margin: 0 0 5vh 0;
+}
+
+hr {
+    margin: auto;
+    margin-bottom: 5vh;
+    width: 75%;
+    color: #707070;
+}
