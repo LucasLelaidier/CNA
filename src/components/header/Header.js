@@ -19,10 +19,10 @@ class Header extends React.Component {
                                 Activités 
                                 <ul className="dropdown">
                                     <li> 
-                                        <a href="e"> Natation de course </a>
+                                        Natation de course
                                         <i className="chevron" data-feather="chevron-right"></i>
                                         <ul className="dropdown side">
-                                            <Link to="/groupe-avenir"><li> Avenir </li> </Link>
+                                            <Link to="/groupe-avenir"> <li> Avenir </li> </Link>
                                             <a href="e"> <li> Departement </li></a>
                                             <a href="e"> <li> District </li></a>
                                             <a href="e"> <li> Aquagym </li></a>
