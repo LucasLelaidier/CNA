@@ -1,19 +1,29 @@
 .form {
-    max-width: 686px; 
+    max-width: 702px; 
 }
 
-form {
+.section {
+    width: 100%;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 0 65px 0;
 }
 
 .info {
-    width:335px;
-}
-
-.info {
+    width: 335px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    margin: 0 8px 26px 8px;
+}
+
+.small {
+    width: 200px;
+}
+
+.wide {
+    width: 100%;
 }
 
 .info label {
@@ -34,6 +44,17 @@ form {
     box-sizing: border-box; /* Opera */
     padding: 0 20px 0 20px;
     background: white;
+}
+
+#submit {
+    background: #E56B6F;
+    border: none;
+    width: 175px;
+    height: 40px;
+    color: white;
+    border-radius: 6px;
+    display: block;
+    margin: auto;
 }
 
 .wrong label {
