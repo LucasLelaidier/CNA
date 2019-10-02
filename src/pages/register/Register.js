@@ -1,12 +1,15 @@
 import React from 'react'
 import './register.css'
 
+import ProgressBar from 'components/progressBar/ProgressBar'
+
 class Register extends React.Component {
     render () {
         return <div className="stray grey">
             <div className="container form">
+                <ProgressBar id="progress"/>
                 <form>
-                    <div class="section civilite">
+                    <div className="section civilite">
                         <div className="info">
                             <label htmlFor="name"> Nom </label>
                             <input id="name" type="texte" name="name" autoComplete="family-name"/>
@@ -23,7 +26,7 @@ class Register extends React.Component {
                         </div>
                     </div>
 
-                    <div class="section address">
+                    <div className="section address">
                         <div className="info">
                             <label htmlFor="city"> Ville </label>
                             <input id="city" type="texte" name="city" autoComplete="address-level2"/>
