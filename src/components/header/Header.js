@@ -28,12 +28,13 @@ class Header extends React.Component {
                                             <a href="e"> <li> Aquagym </li></a>
                                         </ul>
                                     </li>
-                                    <li> <a href="e">Groupe maître</a> </li>
-                                    <li> <a href="e">Groupe loisir</a> </li>
-                                    <li> <a href="e">Aquagym</a> </li>
+                                    <li> <a href="e"> Groupe maître </a> </li>
+                                    <li> <a href="e"> Groupe loisir </a> </li>
+                                    <li> <a href="e"> Aquagym </a> </li>
                                 </ul>
                             </li>
-                            <li> <a href="e">articles </a> </li>
+                            <li> <a href="e"> Articles </a> </li>
+                            <li className="connect"> <a href="#open-modal"> Connexion </a> </li>
                         </ul>
                     </div>
                 </div>

@@ -6,12 +6,14 @@ import GroupeAvenir from 'pages/groupeAvenir/GroupeAvenir'
 import Gallery from 'pages/gallery/Gallery'
 import Register from 'pages/register/Register'
 
+import LoginModal from 'components/loginModal/LoginModal'
 import Header from 'components/header/Header'
 import Footer from 'components/footer/Footer'
 
 export default function MainRouter () {
     return (
         <Router>
+            <LoginModal />
             <Header logoPath="public\email.svg" />
             <div>
                 <Route exact path="/" component={HomePage}/>
