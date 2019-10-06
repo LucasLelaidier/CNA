@@ -7,3 +7,8 @@
     height: 5vh;
     background: #E56B6F;
 }
+
+#footer-mobile {
+    display: none;
+    opacity: 0;
+}

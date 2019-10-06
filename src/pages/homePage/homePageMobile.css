@@ -9,6 +9,7 @@
         scrollbar-width: none; /* For Firefox */
         -ms-overflow-style: none; /* For Internet Explorer and Edge */
         justify-content: initial;
+        padding: 8px;
     }
 
     #events::-webkit-scrollbar {

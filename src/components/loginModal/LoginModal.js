@@ -4,9 +4,9 @@ import './loginModalMobile.css'
 
 class LoginModal extends React.Component {
     render () {
-        return <div id="open-modal" class="modal-window">
+        return <div id="open-modal" className="modal-window">
             <div>
-                <a href="#" title="Fermer" class="modal-close"> Fermer </a>
+                <a href="# " title="Fermer" className="modal-close"> Fermer </a>
                 <h2> Connexion </h2>
                 <form method="post">
                     <div className="section address">

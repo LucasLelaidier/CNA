@@ -1,0 +1,43 @@
+@media only screen and (max-width : 640px) {
+    footer {
+        position: sticky;
+        position: -webkit-sticky;
+        bottom: 0;
+    }
+
+    #footer-top, #footer-bot {
+        display: none;
+        opacity: 0;
+    }
+
+    #footer-mobile {
+        display: flex;
+        opacity: 1;
+        height: 55px;
+        background: #E56B6F;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .foot-group {
+        height: 60%;
+        width: 100%;
+        color: #EC989A;
+        text-align: center;
+    }
+
+    .foot-nav {
+        height: 80%;
+    }
+
+    .nav-text {
+        color: #EC989A;
+        font-size: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+    }
+
+    .foot-group.active, .foot-group.active .nav-text {
+        color: white;
+    }
+}
