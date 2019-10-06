@@ -13,12 +13,7 @@ class HomePage extends Component {
 			<body>
 				<div className="stray grey">
 					<div className="container">
-						<div id="events">
-							<Event/>
-							<Event/>
-						</div>
-
-						<hr/>
+						<Event/>
 
 						<section id="featured-articles">
 							<FeaturedArticle path="https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg">

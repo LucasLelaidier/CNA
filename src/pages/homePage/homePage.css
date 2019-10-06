@@ -29,9 +29,3 @@
     -webkit-filter: none;
     filter: none;
 }
-
-#events {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}

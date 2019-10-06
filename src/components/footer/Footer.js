@@ -7,12 +7,12 @@ class Footer extends React.Component {
     
     render () {
         return <footer>
-            <div id="footer-bot">
-                
-            </div>
-
             <div id="footer-top">
 
+            </div>
+
+            <div id="footer-bot">
+                
             </div>
 
             <div id="footer-mobile">

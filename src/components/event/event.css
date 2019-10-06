@@ -1,10 +1,41 @@
+#events-small {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#events-big {
+    display: none;
+    opacity: 0;
+
+    max-width: 725px;
+    height: 470px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: auto;
+}
+
+#events-big::-webkit-scrollbar {
+    width: 3px;
+    background-color: #DFDFDF; 
+}
+
+#events-big::-webkit-scrollbar-thumb {
+    background: #909090; 
+}
+
+.calendar {
+    margin-bottom: 75px;
+}
+
 .event {
     display: flex;
     align-items: center;
-    margin: 0 2vw 5vh 2vw;
-    /*background: white;
+    margin: 0 5px 0 5px;
+    background: white;
     border-radius: 12px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 6px 12px 6px 12px;
 }
 
 .event-image {
@@ -19,4 +50,57 @@
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     width: 228px;
+}
+
+.more {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #909090;
+    float: right;
+    cursor: pointer;
+}
+
+/* LARGE EVENTS */
+
+.day {
+    display: flex;
+}
+
+.day-events {
+    width: 100%;
+    border-left: solid 1px #707070;
+    margin-bottom: 30px;
+    padding: 0 16px 0 16px;
+}
+
+.day-number {
+    min-width: 115px;
+    text-align: center;
+}
+
+.jour {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #E56B6F;   
+    margin: 0;
+}
+
+.month {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.day-events .event {
+    height: 72px;
+    margin-bottom: 16px; 
+}
+
+.day-events .event p {
+    width: 100%;
+}
+
+.day-events .event svg {
+    display: none;
 }
