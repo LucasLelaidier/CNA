@@ -3,16 +3,4 @@
         padding: 5vh 16px 5vh 16px;
         margin: auto;
     }
-
-    #events {
-        overflow: scroll;
-        scrollbar-width: none; /* For Firefox */
-        -ms-overflow-style: none; /* For Internet Explorer and Edge */
-        justify-content: initial;
-        padding: 8px;
-    }
-
-    #events::-webkit-scrollbar {
-        width: 0px; /* For Chrome, Safari, and Opera */
-    }
 }

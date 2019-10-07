@@ -5,13 +5,31 @@ import feather from 'feather-icons'
 
 class Event extends React.Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isActive: true,
+            spanContent: "Voir toutes les dates"
+        }
+
+        this.changeState = this.changeState.bind(this);
+    }
+
+    changeState() {
+        this.setState(state => ({
+            spanContent: state.isActive ? "Voir moins de dates" : "Voir toutes les dates",
+            isActive: !state.isActive
+        }));
+    }
+
     componentDidMount() {
         feather.replace()
     }
 
     render() {
         return <div className="calendar">
-            <div id="events-small">
+            <div id="events-small" className={!this.state.isActive ? 'hidden' : ''}>
                 <div className="event">
                     <i className="event-image" data-feather="alert-circle"></i>
                     <p>
@@ -27,7 +45,7 @@ class Event extends React.Component {
                 </div>
             </div>
 
-            <div id="events-big">
+            <div id="events-big" className={this.state.isActive ? 'hidden' : ''}>
                 <div className="day">
                     <div className="day-number"> 
                         <span className="jour"> 25 </span> 
@@ -82,7 +100,7 @@ class Event extends React.Component {
                 </div>
             </div>
 
-            <span className="more"> Voir toutes les dates </span>
+            <span className="more" onClick={this.changeState}> {this.state.spanContent} </span>
         </div>
     }
 }

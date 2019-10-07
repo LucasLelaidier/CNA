@@ -5,9 +5,6 @@
 }
 
 #events-big {
-    display: none;
-    opacity: 0;
-
     max-width: 725px;
     height: 470px;
     overflow-y: scroll;
@@ -58,6 +55,10 @@
     color: #909090;
     float: right;
     cursor: pointer;
+}
+
+.more:hover {
+    color: #E56B6F;
 }
 
 /* LARGE EVENTS */

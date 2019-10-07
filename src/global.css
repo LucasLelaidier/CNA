@@ -40,3 +40,8 @@ hr {
     width: 75%;
     color: #707070;
 }
+
+.hidden {
+    display: none !important;
+    opacity: 0;
+}

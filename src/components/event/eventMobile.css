@@ -1,4 +1,16 @@
 @media only screen and (max-width : 736px) {
+    #events-small {
+        overflow: scroll;
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        justify-content: initial;
+        padding: 8px;
+    }
+
+    #events::-webkit-scrollbar {
+        width: 0px; /* For Chrome, Safari, and Opera */
+    }
+
     .events {
         padding: 0 12px 0 12px;
     }
