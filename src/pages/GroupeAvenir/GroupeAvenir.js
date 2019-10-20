@@ -10,7 +10,7 @@ class GroupeAvenir extends Component {
 
 	render() {
 		return (
-            <body>
+            <div>
                 <div className="stray grey">
                     <div className="container">
                         <h1> Natation de course - Groupe Avenir </h1>
@@ -69,7 +69,7 @@ class GroupeAvenir extends Component {
                         </div>
                     </div>
                 </div>
-            </body>
+            </div>
         )
     }
 }

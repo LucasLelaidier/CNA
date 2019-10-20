@@ -12,7 +12,7 @@ class GroupeAvenir extends Component {
 
 	render() {
 		return (
-            <body>
+            <div>
                 <div className="stray grey">
                     <div className="container">
                         <h1> Albums </h1>
@@ -53,7 +53,7 @@ class GroupeAvenir extends Component {
                         </section>
                     </div>
                 </div>
-            </body>
+            </div>
         )
     }
 }

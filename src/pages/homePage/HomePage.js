@@ -10,7 +10,7 @@ import PresentationCard from 'components/presentationCard/PresentationCard'
 class HomePage extends Component {
 	render() {
 		return (
-			<body>
+			<div>
 				<div className="stray grey">
 					<div className="container">
 						<Event/>
@@ -73,7 +73,7 @@ class HomePage extends Component {
 						</section>
 					</div>
 				</div>
-			</body>
+			</div>
 		)
 	}
 }

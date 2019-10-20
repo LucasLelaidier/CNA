@@ -1,4 +1,5 @@
-// This optional code is used to register a service worker.
+/* eslint-disable no-restricted-globals */
+/*// This optional code is used to register a service worker.
 // register() is not called by default.
 
 // This lets the app load faster on subsequent visits in production, and gives
@@ -132,4 +133,5 @@ export function unregister() {
       registration.unregister();
     });
   }
-}
+}*/
+
