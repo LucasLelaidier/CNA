@@ -1,6 +1,7 @@
 {
   "short_name": "CNA",
   "name": "Cercle des Nageurs d'Avranches",
+  "gcm_sender_id": "1054162085403",
   "icons": [
     {
       "src": "favicon.png",

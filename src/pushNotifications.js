@@ -49,7 +49,7 @@ function subscribeUser() {
                     console.warn('Permission for notifications was denied');
                 } 
                 else {
-                    console.error('Unable to subscribe to push', e);
+                    console.error('Unable to subscribe to push : ', e.message);
                 }
             });
         })

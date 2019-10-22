@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').then(function(reg) {
         console.log('Service Worker Registered!', reg);
         
-        subscribeUser();
+        var promise = subscribeUser();
         reg.pushManager.getSubscription().then(function(sub) {
             if (sub === null) {
                 // Update UI to ask user to register for Push
