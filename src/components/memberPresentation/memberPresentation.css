@@ -1,0 +1,29 @@
+.memberPresentation {
+    width: 130px;
+    margin: 0px 50px 20px 50px;
+}
+
+.member-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.content {
+    text-align: center;
+}
+
+.content span {
+    font-size: 14px;
+    display: block;
+}
+
+.content .big {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content .contact {
+    color: #E56B6F;
+    font-weight: bold;
+}

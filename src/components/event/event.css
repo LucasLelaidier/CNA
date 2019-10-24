@@ -26,13 +26,17 @@
 }
 
 .event {
-    display: flex;
-    align-items: center;
     margin: 0 5px 0 5px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     padding: 6px 12px 6px 12px;
+    height: min-content;
+}
+
+.event-head {
+    display: flex;
+    align-items: center;
 }
 
 .event-image {
@@ -94,8 +98,9 @@
 }
 
 .day-events .event {
-    height: 72px;
-    margin-bottom: 16px; 
+    min-height: 72px;
+    margin-bottom: 16px;
+    display: inline-block;
 }
 
 .day-events .event p {

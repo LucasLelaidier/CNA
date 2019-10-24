@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
+
 import './event.css'
 import './eventMobile.css'
-import feather from 'feather-icons'
 
-class Event extends React.Component {
+import feather from 'feather-icons'
+import Poll from 'components/poll/Poll'
+
+class Event extends Component {
 
     constructor(props) {
         super(props);
@@ -31,17 +34,22 @@ class Event extends React.Component {
         return <div className="calendar">
             <div id="events-small" className={!this.state.isActive ? 'hidden' : ''}>
                 <div className="event">
-                    <i className="event-image" data-feather="alert-circle"></i>
-                    <p>
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                    </p>
+                    <div class="event-head">
+                        <i className="event-image" data-feather="alert-circle"></i>
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
+                        </p>
+                    </div>
+                    <Poll className="survey"/>
                 </div>
 
                 <div className="event">
-                    <i className="event-image" data-feather="alert-circle"></i>
-                    <p>
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                    </p>
+                    <div class="event-head">
+                        <i className="event-image" data-feather="alert-circle"></i>
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -54,21 +62,20 @@ class Event extends React.Component {
 
                     <div className="day-events">
                         <div className="event">
-                            <i className="event-image" data-feather="alert-circle"></i>
+                            <p>
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
+                            </p>
+
+                            <Poll/>
+                        </div>
+
+                        <div className="event">
                             <p>
                                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
                             </p>
                         </div>
 
                         <div className="event">
-                            <i className="event-image" data-feather="alert-circle"></i>
-                            <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                            </p>
-                        </div>
-
-                        <div className="event">
-                            <i className="event-image" data-feather="alert-circle"></i>
                             <p>
                                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
                             </p>
@@ -84,14 +91,12 @@ class Event extends React.Component {
                     
                     <div className="day-events">
                         <div className="event">
-                            <i className="event-image" data-feather="alert-circle"></i>
                             <p>
                                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
                             </p>
                         </div>
 
                         <div className="event">
-                            <i className="event-image" data-feather="alert-circle"></i>
                             <p>
                                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
                             </p>

@@ -17,7 +17,7 @@ class Header extends React.Component {
                     <div className="right">
                         <ul className="navbar"> 
                             <li> <Link to="/"> Acceuil </Link> </li>      
-                            <a href="e"> <li> Le club </li></a>
+                            <Link to="/a-propos"> <li> Le club </li></Link>
                             <li>
                                 Activités 
                                 <ul className="dropdown">
