@@ -5,10 +5,25 @@
     justify-content: space-between;
 }
 
-.poll .participants img{
+.participants {
+    display: flex;
+    align-items: center;
+}
+
+.poll .participants img, .poll .participants .oversize {
     width: 21px;
     height: 21px;
     border-radius: 50%;
+}
+
+.poll .participants .oversize {
+    background: #fafafa;
+    color: #909090;
+    line-height: 21px;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0;
 }
 
 .poll .link {

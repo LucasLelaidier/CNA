@@ -30,7 +30,51 @@ class Event extends Component {
         feather.replace()
     }
 
+    loadData() {
+        return {
+            "events": [
+                {
+                    "id": 1,
+                    "day": 5,
+                    "month": "octobre",
+                    "content": "1er District, Compétition Départementale en bassin de 25m à GRANVILLE"
+                },
+                {
+                    "id": 2,
+                    "day": 13,
+                    "month": "juillet",
+                    "content": "Championnats de l'Ouest Jeunes, Compétition Nationale en bassin de 50m à NANTES"
+                },
+                {
+                    "id": 2,
+                    "day": 13,
+                    "month": "juillet",
+                    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim."
+                },
+                {
+                    "id": 2,
+                    "day": 13,
+                    "month": "juillet",
+                    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim."
+                },
+                {
+                    "id": 2,
+                    "day": 2,
+                    "month": "juin",
+                    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim."
+                },
+            ]
+        }
+    }
+
     render() {
+        let events = [];
+        let json = this.loadData();
+
+        json['events'].forEach(event => {
+            events[event.day + " " + event.month] += <div className='event'> <p> {event.content} </p> </div>
+        });
+
         return <div className="calendar">
             <div id="events-small" className={!this.state.isActive ? 'hidden' : ''}>
                 <div className="event">
