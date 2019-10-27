@@ -35,33 +35,38 @@ class Event extends Component {
             "events": [
                 {
                     "id": 1,
-                    "day": 5,
+                    "day": "05",
                     "month": "octobre",
-                    "content": "1er District, Compétition Départementale en bassin de 25m à GRANVILLE"
+                    "content": "1er District, Compétition Départementale en bassin de 25m à GRANVILLE",
+                    "poll": "cna"
                 },
                 {
                     "id": 2,
                     "day": 13,
                     "month": "juillet",
-                    "content": "Championnats de l'Ouest Jeunes, Compétition Nationale en bassin de 50m à NANTES"
+                    "content": "Championnats de l'Ouest Jeunes, Compétition Nationale en bassin de 50m à NANTES",
+                    "poll": "none"
                 },
                 {
-                    "id": 2,
+                    "id": 3,
                     "day": 13,
                     "month": "juillet",
-                    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim."
+                    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
+                    "poll": "none"
                 },
                 {
-                    "id": 2,
+                    "id": 4,
                     "day": 13,
                     "month": "juillet",
-                    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim."
+                    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
+                    "poll": "none"
                 },
                 {
-                    "id": 2,
-                    "day": 2,
+                    "id": 5,
+                    "day": "02",
                     "month": "juin",
-                    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim."
+                    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
+                    "poll": "none"
                 },
             ]
         }
@@ -69,84 +74,59 @@ class Event extends Component {
 
     render() {
         let events = [];
+        let smallEvents = [];
+        let htmlEvents = [];
         let json = this.loadData();
 
         json['events'].forEach(event => {
-            events[event.day + " " + event.month] += <div className='event'> <p> {event.content} </p> </div>
+            // Small events
+            if(smallEvents.length < 2) {
+                smallEvents.push(
+                    <div className="event">
+                        <div className="event-head">
+                            <div className="day-number-small"> 
+                                <span className="jour"> { event.day } </span> 
+                                <span className="month"> { event.month } </span> 
+                            </div>
+                            <p>
+                                {event.content}
+                            </p>
+                        </div>
+                        { event.poll !== 'none' ? <Poll callToAction = "Je participe" /> : null }
+                    </div>
+                )
+            }
+            //Big events
+            if(!(event.day + "-" + event.month in events)) {
+                events[event.day + "-" + event.month] = [];
+            }
+            events[event.day + "-" + event.month].push(
+                <div className='event'> <p> {event.content} </p> { event.poll !== 'none' ? <Poll callToAction = "Je participe" /> : null } </div>
+            );
         });
+
+        for(let key in events) {
+            let splittedKey = key.split("-");
+            htmlEvents.push(
+                <div className="day">
+                    <div className="day-number"> 
+                        <span className="jour"> { splittedKey[0] } </span> 
+                        <span className="month"> { splittedKey[1] } </span> 
+                    </div>
+                    <div className="day-events">
+                        { events[key] }
+                    </div>
+                </div>
+            )
+        }
 
         return <div className="calendar">
             <div id="events-small" className={!this.state.isActive ? 'hidden' : ''}>
-                <div className="event">
-                    <div class="event-head">
-                        <i className="event-image" data-feather="alert-circle"></i>
-                        <p>
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                        </p>
-                    </div>
-                    <Poll className="survey"/>
-                </div>
-
-                <div className="event">
-                    <div class="event-head">
-                        <i className="event-image" data-feather="alert-circle"></i>
-                        <p>
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                        </p>
-                    </div>
-                </div>
+                { smallEvents }
             </div>
 
             <div id="events-big" className={this.state.isActive ? 'hidden' : ''}>
-                <div className="day">
-                    <div className="day-number"> 
-                        <span className="jour"> 25 </span> 
-                        <span className="month"> Mai </span> 
-                    </div>
-
-                    <div className="day-events">
-                        <div className="event">
-                            <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                            </p>
-
-                            <Poll/>
-                        </div>
-
-                        <div className="event">
-                            <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                            </p>
-                        </div>
-
-                        <div className="event">
-                            <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="day">
-                    <div className="day-number"> 
-                        <span className="jour"> 03 </span> 
-                        <span className="month"> Juin </span> 
-                    </div>
-                    
-                    <div className="day-events">
-                        <div className="event">
-                            <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                            </p>
-                        </div>
-
-                        <div className="event">
-                            <p>
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                { htmlEvents }
             </div>
 
             <span className="more" onClick={this.changeState}> {this.state.spanContent} </span>

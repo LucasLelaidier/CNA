@@ -83,6 +83,11 @@
     text-align: center;
 }
 
+.day-number-small {
+    text-align: center;
+    margin: 0 15px 0 10px;
+}
+
 .jour {
     font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
@@ -91,10 +96,25 @@
     margin: 0;
 }
 
+.day-number-small .jour {
+    position: relative;
+    top: 5px;
+    font-size: 40px;
+    display: block;
+}
+
 .month {
+    position: relative;
+    top: -10px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+.day-number-small .month {
+    position: relative;
+    font-size: 20px;
+    top: -5px;
 }
 
 .day-events .event {

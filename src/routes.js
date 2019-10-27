@@ -6,6 +6,7 @@ import GroupeAvenir from 'pages/groupeAvenir/GroupeAvenir'
 import Gallery from 'pages/gallery/Gallery'
 import Register from 'pages/register/Register'
 import About from 'pages/about/About'
+import Articles from 'pages/articles/Articles'
 
 import LoginModal from 'components/loginModal/LoginModal'
 import Header from 'components/header/Header'
@@ -23,6 +24,7 @@ export default function MainRouter () {
                 <Route exact path="/galerie" component={Gallery}/>
                 <Route exact path="/inscription" component={Register}/>
                 <Route exact path="/a-propos" component={About}/>
+                <Route exact path="/articles" component={Articles}/>
             </div>
             <Footer />
         </Router>

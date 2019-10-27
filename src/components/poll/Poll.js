@@ -41,14 +41,16 @@ class Poll extends Component {
 
         json["participants"].forEach(participant => {
             if(participants.length < 5) {
-                participants.push(<img alt={participant.name} src={participant.profil}/>)
+                participants.push(
+                    <img alt={ participant.name } src={ participant.profil }/>
+                )
             }
             else {
                 oversize++;
             }
         });
 
-        participants.push(<div className="oversize"> {oversize}+ </div>)
+        participants.push(<div className="oversize"> { oversize }+ </div>)
 
         return (
             <div className="poll">
@@ -58,7 +60,7 @@ class Poll extends Component {
 
                 <div className="link">
                     <i className="baricon" data-feather="bar-chart-2"></i>
-                    <span> Répondre au sondage </span>
+                    <span> { this.props.callToAction } </span>
                 </div>
             </div>
         )

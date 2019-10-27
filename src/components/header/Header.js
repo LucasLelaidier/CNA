@@ -36,7 +36,7 @@ class Header extends React.Component {
                                     <li> <a href="e"> Aquagym </a> </li>
                                 </ul>
                             </li>
-                            <li> <a href="e"> Articles </a> </li>
+                            <li> <Link to="/articles"> Articles </Link> </li>
                             <li className="connect"> <a href="#open-modal"> Connexion </a> </li>
                         </ul>
                     </div>

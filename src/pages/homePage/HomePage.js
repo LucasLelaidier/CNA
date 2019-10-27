@@ -8,7 +8,102 @@ import Event from 'components/event/Event'
 import PresentationCard from 'components/presentationCard/PresentationCard'
 
 class HomePage extends Component {
+	
+	loadData() {
+		return {
+			"articles" : [
+				{
+					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg",
+					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
+				},
+				{
+					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_33130.jpg",
+					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
+				},
+				{
+					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31226.jpg",
+					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
+				},
+			],
+			"logos" : [
+				{
+					"brand" : "13 assiettes",
+					"logo" : "/logos/13assiettes.png"
+				},
+				{
+					"brand" : "AmM",
+					"logo" : "/logos/AM.png"
+				},
+				{
+					"brand" : "avranches",
+					"logo" : "/logos/avranches.jpg	"
+				},
+				{
+					"brand" : "avranches",
+					"logo" : "/logos/avranches.png"
+				},
+				{
+					"brand" : "buffalo grill",
+					"logo" : "/logos/BuffaloGrill.png"
+				},
+				{
+					"brand" : "credit mutuel",
+					"logo" : "/logos/creditmutuel.jpg"
+				},
+				{
+					"brand" : "croix d'or",
+					"logo" : "/logos/croixDor.png"
+				},
+				{
+					"brand" : "jouet club",
+					"logo" : "/logos/jouetclub.jpg"
+				},
+				{
+					"brand" : "manche",
+					"logo" : "/logos/manche.png"
+				},
+				{
+					"brand" : "macdonald",
+					"logo" : "/logos/mcdo.png"
+				},
+				{
+					"brand" : "mère poulard",
+					"logo" : "/logos/merePoulard.jpg"
+				},
+				{
+					"brand" : "NDP",
+					"logo" : "/logos/NDP.PNG"
+				},
+				{
+					"brand" : "norauto",
+					"logo" : "/logos/norauto.PNG"
+				},
+				{
+					"brand" : "normandie",
+					"logo" : "/logos/normandie.jpg"
+				},
+			]
+		}
+	}
+
 	render() {
+		let articles = [];
+		let logos = [];
+		let data = this.loadData();
+
+		data['articles'].forEach(article => {
+			articles.push(
+				<FeaturedArticle path={ article.thumbnail }>
+					{ article.description }
+				</FeaturedArticle>
+			)
+		});
+		data['logos'].forEach(logo => {
+			logos.push(
+				<img alt={ logo.brand } src={ logo.logo } />
+			)
+		});
+
 		return (
 			<div>
 				<div className="stray grey">
@@ -16,17 +111,7 @@ class HomePage extends Component {
 						<Event/>
 
 						<section id="featured-articles">
-							<FeaturedArticle path="https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg">
-								I have some blocks that I want to layout individually on the page, however I also want them to update wh...
-							</FeaturedArticle>
-
-							<FeaturedArticle path="https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg">
-								I have some blocks that I want to layout individually on the page, however I also want them to update wh...
-							</FeaturedArticle>
-
-							<FeaturedArticle path="https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg">
-								I have some blocks that I want to layout individually on the page, however I also want them to update wh...
-							</FeaturedArticle>
+							{ articles }
 						</section>
 					</div>
 				</div>
@@ -37,20 +122,7 @@ class HomePage extends Component {
 							<h1> Ils nous soutiennent : </h1>
 
 							<section className="sponsors">
-								<img alt="logo" src="/logos/13assiettes.png" />
-								<img alt="logo" src="/logos/AM.png" />
-								<img alt="logo" src="/logos/avranches.jpg" />
-								<img alt="logo" src="/logos/avranches.png" />
-								<img alt="logo" src="/logos/BuffaloGrill.png" />
-								<img alt="logo" src="/logos/creditmutuel.jpg" />
-								<img alt="logo" src="/logos/croixDor.png" />
-								<img alt="logo" src="/logos/jouetclub.jpg" />
-								<img alt="logo" src="/logos/manche.png" />
-								<img alt="logo" src="/logos/mcdo.png" />
-								<img alt="logo" src="/logos/merePoulard.jpg" />
-								<img alt="logo" src="/logos/NDP.PNG" />
-								<img alt="logo" src="/logos/norauto.PNG" />
-								<img alt="logo" src="/logos/normandie.jpg" />
+								{ logos }
 							</section>
 						</div>
 					</div>
