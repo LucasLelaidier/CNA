@@ -13,8 +13,6 @@ class Articles extends Component {
 		};
 
 		this.scrolled = this.scrolled.bind(this);
-
-		this.articlesSection = React.createRef();
 	}
 
     loadData() {
@@ -94,7 +92,7 @@ class Articles extends Component {
                 <div className="container">
 					<h1 className="centered"> Nos articles </h1>
 
-                    <section id="featured-articles" ref={this.articlesSection}>
+                    <section id="featured-articles">
                         {this.state.articles}
                     </section>
                 </div>

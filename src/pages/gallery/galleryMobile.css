@@ -6,4 +6,9 @@
     .album {
         width: 40vw;
     }
+
+    .images .image {
+        width: 25vw;
+        padding-bottom: 33%;
+    }
 }

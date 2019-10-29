@@ -82,6 +82,34 @@ class HomePage extends Component {
 					"brand" : "normandie",
 					"logo" : "/logos/normandie.jpg"
 				},
+				{
+					"brand" : "optique mazier",
+					"logo" : "/logos/optiqueMazier.PNG"
+				},
+				{
+					"brand" : "petit bateau",
+					"logo" : "/logos/petitBateau.jpg"
+				},
+				{
+					"brand" : "optique plantade",
+					"logo" : "/logos/plantade.PNG"
+				},
+				{
+					"brand" : "les petits poulbots",
+					"logo" : "/logos/ptitPoulbots.png"
+				},
+				{
+					"brand" : "pulsat",
+					"logo" : "/logos/pulsat.png"
+				},
+				{
+					"brand" : "décathlon",
+					"logo" : "/logos/decathlon.png"
+				},
+				{
+					"brand" : "solabaie",
+					"logo" : "/logos/solabaie.jpg"
+				},
 			]
 		}
 	}
