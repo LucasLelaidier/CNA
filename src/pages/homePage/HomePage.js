@@ -13,16 +13,22 @@ class HomePage extends Component {
 		return {
 			"articles" : [
 				{
+					"id": 1,
 					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg",
-					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
+					"title": "Finale du Nat Avenirs Eté",
+					"description" : "Dimanche 16 Juin s’est déroulée la finale régionale du Nat Avenirs à saint Lo. A l’issue des deux journées départementales..."
 				},
 				{
+					"id": 2,
 					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_33130.jpg",
-					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
+					"title": "1ère journée District à Granville",
+					"description" : "Première compétition pour nos nageurs avranchinais ce week end lors de la 1ère journée district de rentrée !!!"
 				},
 				{
+					"id": 3,
 					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31226.jpg",
-					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
+					"title": "Interclubs normandie jeunes",
+					"description" : "🏆🏆🏆🏆Championnes de Normandie pour l’equipe 1, composée de Rose HENNEQUIN, Inès BATTAIS, Berenice DATIN et Louisa LANDEMAINE 🏆🏆🏆🏆"
 				},
 			],
 			"logos" : [
@@ -121,15 +127,18 @@ class HomePage extends Component {
 
 		data['articles'].forEach(article => {
 			articles.push(
-				<FeaturedArticle path={ article.thumbnail }>
-					{ article.description }
+				<FeaturedArticle path={article.thumbnail} title={article.title} key={article.id}>
+					{article.description}
 				</FeaturedArticle>
 			)
 		});
+
+		let id = 0;
 		data['logos'].forEach(logo => {
 			logos.push(
-				<img alt={ logo.brand } src={ logo.logo } />
+				<img alt={logo.brand} src={logo.logo} key={id} />
 			)
+			id++;
 		});
 
 		return (
@@ -139,7 +148,7 @@ class HomePage extends Component {
 						<Event/>
 
 						<section id="featured-articles">
-							{ articles }
+							{articles}
 						</section>
 					</div>
 				</div>
@@ -150,7 +159,7 @@ class HomePage extends Component {
 							<h1> Ils nous soutiennent : </h1>
 
 							<section className="sponsors">
-								{ logos }
+								{logos}
 							</section>
 						</div>
 					</div>
@@ -159,15 +168,15 @@ class HomePage extends Component {
 				<div className="stray grey">
 					<div className="container grey">
 						<section id="cards">
-							<PresentationCard path="/illustrations/joindre.jpeg" title="Nous joindre">
+							<PresentationCard path="/illustrations/joindre.jpeg" title="Nous joindre" callToAction="Nous contacter">
 								Retrouvez toutes les informations utiles pour nous contacter !
 							</PresentationCard>
 
-							<PresentationCard path="/illustrations/rejoindre.jpg" title="Rejoindre le club">
+							<PresentationCard path="/illustrations/rejoindre.jpg" title="Rejoindre le club" callToAction="Voir les activités">
 								Vous souhaitez rejoindre le club ? Retrouvez ici toutes les activités que nous proposons. 
 							</PresentationCard>
 
-							<PresentationCard path="/illustrations/resultats.jpg" title="Voir mes résultats">
+							<PresentationCard path="/illustrations/resultats.jpg" title="Voir mes résultats" callToAction="Voir mes résultats">
 								Vous avez participé à une compétition ? Retrouvez vos résultats ici.
 							</PresentationCard>
 						</section>

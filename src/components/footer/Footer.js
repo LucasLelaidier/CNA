@@ -3,10 +3,15 @@ import React from 'react'
 import './footer.css'
 import './footerMobile.css'
 
+import feather from 'feather-icons'
 import { Link } from "react-router-dom";
 
 class Footer extends React.Component {
-    
+
+    componentDidMount() {
+        feather.replace();
+    }
+
     render () {
         return <footer>
             <div id="footer-top">
@@ -23,15 +28,15 @@ class Footer extends React.Component {
                     <span className="nav-text"> Accueil </span>
                 </Link>
 
-                <Link className="foot-group" to="/le-club">
+                <Link className="foot-group" to="/a-propos">
                     <i className="foot-nav" data-feather="globe"></i>
                     <span className="nav-text"> Le club </span>
                 </Link>
 
-                <div className="foot-group">
+                <Link className="foot-group active" to="/">
                     <i className="foot-nav" data-feather="grid"></i>
                     <span className="nav-text"> Activités </span>
-                </div>
+                </Link>
                 
                 <Link className="foot-group" to="/articles">
                     <i className="foot-nav" data-feather="file-text"></i>

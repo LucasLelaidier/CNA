@@ -15,7 +15,7 @@ class PresentationCard extends React.Component {
                 </p>
 
                 <button>
-                    nous contacter
+                    {this.props.callToAction}
                 </button>
             </div>
         </div>

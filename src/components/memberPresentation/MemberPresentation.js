@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import './memberPresentation.css'
+import './memberPresentationMobile.css'
 
 class MemberPresentation extends Component {
     render() {

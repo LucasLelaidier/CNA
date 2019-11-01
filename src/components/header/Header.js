@@ -16,7 +16,7 @@ class Header extends React.Component {
 
                     <div className="right">
                         <ul className="navbar"> 
-                            <li> <Link to="/"> Acceuil </Link> </li>      
+                            <Link to="/"> <li> Acceuil </li> </Link>     
                             <Link to="/a-propos"> <li> Le club </li></Link>
                             <li>
                                 Activités 
@@ -36,7 +36,8 @@ class Header extends React.Component {
                                     <li> <a href="e"> Aquagym </a> </li>
                                 </ul>
                             </li>
-                            <li> <Link to="/articles"> Articles </Link> </li>
+                            <Link to="/articles"> <li> Articles </li> </Link>
+                            <Link to="/galerie"> <li> Galerie </li> </Link>
                             <li className="connect"> <a href="#open-modal"> Connexion </a> </li>
                         </ul>
                     </div>

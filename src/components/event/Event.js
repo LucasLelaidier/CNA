@@ -82,7 +82,7 @@ class Event extends Component {
             // Small events
             if(smallEvents.length < 2) {
                 smallEvents.push(
-                    <div className="event">
+                    <div className="event" key={event.id}>
                         <div className="event-head">
                             <div className="day-number-small"> 
                                 <span className="jour"> { event.day } </span> 
@@ -101,14 +101,14 @@ class Event extends Component {
                 events[event.day + "-" + event.month] = [];
             }
             events[event.day + "-" + event.month].push(
-                <div className='event'> <p> {event.content} </p> { event.poll !== 'none' ? <Poll callToAction = "Je participe" /> : null } </div>
+                <div className='event' key={event.id}> <p> {event.content} </p> { event.poll !== 'none' ? <Poll callToAction = "Je participe" /> : null } </div>
             );
         });
 
         for(let key in events) {
             let splittedKey = key.split("-");
             htmlEvents.push(
-                <div className="day">
+                <div className="day" key={key}>
                     <div className="day-number"> 
                         <span className="jour"> { splittedKey[0] } </span> 
                         <span className="month"> { splittedKey[1] } </span> 

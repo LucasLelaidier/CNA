@@ -33,7 +33,7 @@ class FeaturedArticle extends React.Component {
                 
             </div>
             <div ref={this.footer} className="article-foot">
-                <h2 className="title"> Compétition du 25 juin </h2>
+                <h2 className="title"> {this.props.title} </h2>
                 <p ref={this.description}>
                     {this.props.children}
                 </p>

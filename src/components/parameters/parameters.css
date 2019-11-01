@@ -1,0 +1,42 @@
+.parameters-bloc {
+    width: 850px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.parameters-bloc h2 {
+    font-size: 16px;
+    color: #E56B6F;
+}
+
+.parameters-bloc section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    width: 100%;
+}
+
+.parameters-bloc section div {
+    height: 40px;
+    border-bottom: 1px solid #DCDCDC;
+    padding: 0 20px 0 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.parameters-bloc section div:last-child {
+    border-bottom: none;
+}
+
+.parameters-bloc section div span {
+    font-size: 12px;
+    line-height: 40px;
+}
+
+
+.parameters-bloc section div .see-icon {
+    position: absolute; 
+    margin: 0;
+    top: 15px;
+    right: 0;
+}

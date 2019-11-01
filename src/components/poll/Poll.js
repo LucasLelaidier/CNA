@@ -42,7 +42,7 @@ class Poll extends Component {
         json["participants"].forEach(participant => {
             if(participants.length < 5) {
                 participants.push(
-                    <img alt={ participant.name } src={ participant.profil }/>
+                    <img alt={participant.name} src={participant.profil} key={participant.id} />
                 )
             }
             else {
@@ -50,7 +50,7 @@ class Poll extends Component {
             }
         });
 
-        participants.push(<div className="oversize"> { oversize }+ </div>)
+        participants.push(<div className="oversize" key="a"> { oversize }+ </div>)
 
         return (
             <div className="poll">

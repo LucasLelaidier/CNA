@@ -1,6 +1,7 @@
 .article {
     width: 335px;
     margin: 21px 21px 21px 21px;
+    cursor: pointer;
 }
 
 .article-head {
