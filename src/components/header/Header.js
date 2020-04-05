@@ -11,7 +11,7 @@ class Header extends React.Component {
             <header className="header">
                 <div className="header-content">
                     <div className="left">
-                        <img alt="logo" id="logoHeader" src={process.env.PUBLIC_URL + '/logoCNA_full.svg'}/>
+                        <img alt="logo" id="logoHeader" src={process.env.PUBLIC_URL + '/logoCNA_full.png'}/>
                     </div>
 
                     <div className="right">

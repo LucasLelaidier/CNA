@@ -6,7 +6,8 @@ import MainRouter from './routes'
 
 class App extends Component {
 	render() {
-		return (<div>
+		return (
+			<div>
 				<MainRouter />
 			</div>
 		)

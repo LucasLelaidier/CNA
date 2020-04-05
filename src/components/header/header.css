@@ -10,7 +10,7 @@ header {
     z-index: 500;
 }
 
-.header-content {
+.header .header-content {
     height: 90px;
     margin: auto;
     max-width: 1194px;
@@ -18,25 +18,25 @@ header {
     flex-wrap: wrap;
 }
 
-.left, .right {
+.header .left, .header .right {
     width: 50%;
     height: 100%;
 }
 
-.mobileHeader {
+.header .mobileHeader {
     padding: 1vh 1vw 1vh 1vw; 
 }
 
-#logoHeader {
+.header #logoHeader {
     height: 100%;
     max-width: 100%;
 }
 
-.navbar {
+.header .navbar {
     float: right;
 }
 
-.navbar li {
+.header .navbar li {
     display: inline-block;
     margin-right: 1em;
     position: relative; 
@@ -45,19 +45,19 @@ header {
     align-items: center;
 }
 
-.navbar:hover {
+.header .navbar:hover {
     cursor: pointer;
 }
 
-.navbar svg {
+.header .navbar svg {
     margin-right: 1em;
 }
 
-.navbar img {
+.header .navbar img {
     height: 4vh;
 }
 
-.navbar {
+.header .navbar {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -68,18 +68,18 @@ header {
     font-size: 16px;
 }
 
-.hide {
+.header .hide {
     position: absolute !important;
     top: -9999px !important;
     left: -9999px !important;
  }
 
- a {
+a {
     color: black;
     text-decoration: none;
  }
 
-.dropdown {
+.header .dropdown {
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -92,12 +92,12 @@ header {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12)
 }
 
-.side {
+.header .side {
     left: 100%;
     top: -100%;
 }
 
-.dropdown li {
+.header .dropdown li {
     white-space:nowrap;
     font-weight: normal;
     font-size: 14px;
@@ -105,11 +105,11 @@ header {
     margin: 0;
 }
 
-.dropdown li:hover {
+.header .dropdown li:hover {
     background: #FAFAFA;
 }
 
-.chevron {
+.header .chevron {
     height: 14px;
     color:  909090;
     vertical-align: center;
@@ -117,9 +117,9 @@ header {
     left: 85%;
 }
 
-.navbar li:hover > .dropdown,
-.navbar li:focus-within > .dropdown,
-.navbar li .dropdown:hover {
+.header .navbar li:hover > .dropdown,
+.header .navbar li:focus-within > .dropdown,
+.header .navbar li .dropdown:hover {
     visibility: visible;
     opacity: 1;
     display: initial;
@@ -149,6 +149,6 @@ header {
     cursor: pointer;
 }
 
-.connect > a {
+.header .connect > a {
     color: #E56B6F;
 }

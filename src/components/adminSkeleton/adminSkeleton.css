@@ -1,0 +1,191 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#root, #root > div, #root > div > div {
+    height: 100%;
+}
+
+#admin-grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 280px 1fr 354px;
+    overflow: hidden;
+}
+
+#admin-grid > div {
+    height: 100%;
+}
+
+#admin-grid .left {
+    background-color: white;
+    border-right: #D9D9D9 solid 1px;
+}
+
+#admin-grid .left > img{
+    width: 40%;
+    display: block;
+    margin: 26px auto 0 auto;
+}
+
+#admin-grid .left .menu {
+    margin: 160px 0 0 40px;
+}
+
+#admin-grid .left .menu .link {
+    display: flex;
+    align-items: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    align-items: center;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+#admin-grid .left .menu .link > span {
+    color: #AFA8A9;
+    margin-left: 40px;
+}
+
+#admin-grid .left .menu .link.selected {
+    border-right: solid 2px #E56B6F;
+}
+
+#admin-grid .left .menu .link.selected > span {
+    color: #E56B6F;
+    font-weight: bold;
+}   
+
+#admin-grid .left .light-button {
+    color: #E56B6F;
+    border: #E56B6F 2px solid;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 13px 25px;
+}
+
+#admin-grid .center {
+    background-color: #F9F2F3;
+    padding: 50px 106px 0px 106px;
+    overflow: scroll;
+}
+
+#admin-grid .center .title-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+
+#admin-grid .center .title-head h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #E56B6F;
+    margin: 0;
+}
+
+#admin-grid .center .title-head span, #admin-grid .center .title-head a {
+    background: #E56B6F;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+#admin-grid .center .content {
+    width: 100%;
+    margin: 50px 0 200px 0;
+}
+
+#admin-grid .right {
+    background-color: white;
+    border-left: #D9D9D9 solid 1px;
+    padding: 50px 36px 50px 36px;
+}
+
+#admin-grid .right h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #E56B6F;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+#admin-grid .right .separator span {
+    color: #909090;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#admin-grid .right .separator hr {
+    display: inline-block; 
+    width: 100%;
+    color: #909090;
+}
+
+#admin-grid .right .operation {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0 14px 0;
+}
+
+#admin-grid .right .operation .content {
+    font-family: "Roboto";
+    color: black;
+    font-size: 12px;
+}
+
+#admin-grid .right .operation .content h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+#admin-grid .right .operation .edit {
+    padding: 10px;
+    border-radius: 50%;
+    background: #E56B6F;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* @media screen and (max-width: 1360px) { */
+@media screen and (max-width: 5000px) {
+    #admin-grid .right {
+        display: none;
+    }
+
+    #admin-grid {
+        grid-template-columns: 280px 1fr 0;
+    }
+}
+
+@media screen and (max-width: 1006px) {
+    #admin-grid {
+        height:auto;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    #admin-grid .center {
+        background-color: #F9F2F3;
+        padding: 120px 5px 0px 5px;
+        overflow: scroll;
+    }
+}

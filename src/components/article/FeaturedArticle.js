@@ -1,10 +1,12 @@
 import React from 'react'
 import './featuredArticle.css'
 import './featuredArticleMobile.css'
+
+import PropTypes from 'prop-types';
 import ReactResizeDetector from 'react-resize-detector';
+import { Link } from "react-router-dom";
 
 class FeaturedArticle extends React.Component {
-
     constructor(props) {
         super(props);
 
@@ -28,9 +30,9 @@ class FeaturedArticle extends React.Component {
     }
 
     render () {
-        return <article className="article">
-            <div className="article-head" style={{backgroundImage: `url(${this.props.path})`}}>
-                
+        return <Link to={`${this.props.edit ? '/admin' : ''}/article/${this.props.id}`} className="article">
+            <div className="article-head" style={this.props.color ? {backgroundColor: this.props.color} : {backgroundImage: `url(${this.props.preview ? this.props.path : `http://localhost:7958${this.props.path}`})`}}>
+                <span className="article-date"> {this.props.date} </span>
             </div>
             <div ref={this.footer} className="article-foot">
                 <h2 className="title"> {this.props.title} </h2>
@@ -39,12 +41,12 @@ class FeaturedArticle extends React.Component {
                 </p>
                 <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
             </div>
-        </article>
+        </Link>
     }
 }
 
-FeaturedArticle.defaultProps = {
-    path: '/logoCNA_full.svg'
+FeaturedArticle.propTypes = {
+    id: PropTypes.number.isRequired,
 }
 
 export default FeaturedArticle;

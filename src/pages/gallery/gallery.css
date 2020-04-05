@@ -1,14 +1,16 @@
 .albums {
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
     margin: 0 0 60px 0;
+    padding-bottom: 5px;
 }
 
 .album {
-    width: 16%;
+    max-width: 200px;
+    min-width: 200px;
     height: 65px;
-    margin: 0 1% 0 1%;
+    margin: 0 16px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
@@ -31,11 +33,6 @@
     color: #909090;
 }
 
-.album .dl-icon:hover {
-    color: #E56B6F;
-}
-
-
 .more-link {
     float: right;
     color: #E56B6F;
@@ -45,15 +42,18 @@
 }
 
 .images {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
+}
+
+.images div {
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .images .image {
-    width: 24%;
-    padding-bottom: 24%;
-    margin: 1vh;
+    width: 100%;
+    padding-bottom: 100%;
     background-size: cover;
     background-position: center;
 }

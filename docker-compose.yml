@@ -1,0 +1,40 @@
+version: '3'
+services:
+  database:
+    image: cna-db:latest
+    ports:
+      - "5432:5432"
+    networks:
+      - reseau
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  api:
+    image: postgrest/postgrest
+    ports:
+      - "3001:3000"
+    networks:
+      - reseau
+    environment:
+      PGRST_DB_URI: postgres://authenticator:mysecretpassword@database:5432/cnadb
+      PGRST_DB_SCHEMA: api
+      PGRST_DB_ANON_ROLE: web_anon # In production this role should not be the same as the one used for the connection
+      PGRST_JWT_SECRET: "#5?65*JQwZ97bM/pG5}&=';xG!GSaf9P"
+
+  fileserver:
+    image: lucaseaiie/file-upload-api:v1.0.1
+    ports:
+      - "7958:7958"
+    environment:
+      ENABLE_CORS: "true"
+    volumes:
+      - uploaded:/usr/src/app/uploaded
+
+networks:
+  reseau:
+
+volumes:
+  pgdata:
+  uploaded:

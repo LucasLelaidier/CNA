@@ -5,22 +5,27 @@ import './about.css'
 import 'components/memberPresentation/MemberPresentation'
 import MemberPresentation from 'components/memberPresentation/MemberPresentation'
 
+import Header from 'components/header/Header'
+import Footer from 'components/footer/Footer'
+
 class About extends Component {
     render() {
         return (
             <div id="about">
+                <Header />
                 <div className="stray grey">
                     <div className="container">
                         <h1 className="centered"> Les membres du CNA </h1>
 
                         <section className="members">
-                            <MemberPresentation className="member" path="/fake_users/32.jpg" name="Didier Desforges" fonction="entraîneur" contact="02.40.76.18.81"/>
-                            <MemberPresentation className="member" path="/fake_users/43.jpg" name="Jesper Beauchamps" fonction="Trésorier" contact="02.12.53.99.08"/>
-                            <MemberPresentation className="member" path="/fake_users/44.jpg" name="Jesper Beauchamps" fonction="Trésorier" contact="02.12.53.99.07"/>
-                            <MemberPresentation className="member" path="/fake_users/65.jpg" name="Jesper Beauchamps" fonction="Trésorier" contact="02.12.53.99.08"/>
+                            <MemberPresentation className="member" name="Cathy Jolivet" fonction="Présidente" contact="cna.presidence@gmail.com"/>
+                            <MemberPresentation className="member" name="Valérie Véron" fonction="Trésorière" contact="cna.secretariat50@gmail.com"/>
+                            <MemberPresentation className="member" name="Stany" fonction="Entraineur" contact="cna.stany@gmail.com"/>
+                            <MemberPresentation className="member" name="Jesper Beauchamps" fonction="Trésorier" contact="02.12.53.99.08"/>
                         </section>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }

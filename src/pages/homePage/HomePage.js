@@ -7,8 +7,22 @@ import FeaturedArticle from 'components/article/FeaturedArticle'
 import Event from 'components/event/Event'
 import PresentationCard from 'components/presentationCard/PresentationCard'
 
+import Header from 'components/header/Header'
+import Footer from 'components/footer/Footer'
+
 class HomePage extends Component {
+	constructor(props) {
+        super(props);
+
+        this.state = {
+            articles: [],
+        };
+	}
 	
+	componentDidMount() {
+		this.getArticles();
+	}
+
 	loadData() {
 		return {
 			"articles" : [
@@ -120,15 +134,33 @@ class HomePage extends Component {
 		}
 	}
 
+	firstParagraph(data) {
+        for(let block in data["blocks"]) {
+            for(var key in data["blocks"][block]) {
+                if(key === "type" && data["blocks"][block][key] === "paragraph") {
+                    return data["blocks"][block]["data"]["text"].substring(0, 122) + "...";
+                }
+            }
+        }
+    }
+
+	getArticles() {
+		fetch('http://localhost:3001/article?order=art_date.desc&limit=3')
+			.then(res => res.json())
+			.then((articles) => {
+				this.setState({ articles: articles })
+			});
+	}
+
 	render() {
 		let articles = [];
 		let logos = [];
 		let data = this.loadData();
 
-		data['articles'].forEach(article => {
+		this.state.articles.forEach(article => {
 			articles.push(
-				<FeaturedArticle path={article.thumbnail} title={article.title} key={article.id}>
-					{article.description}
+				<FeaturedArticle id={article.art_id} path={article.art_thumbnail} title={article.art_titre} date={article.art_date} key={article.art_id}>
+					{ this.firstParagraph(JSON.parse(article.art_contenu)) }
 				</FeaturedArticle>
 			)
 		});
@@ -143,6 +175,7 @@ class HomePage extends Component {
 
 		return (
 			<div>
+            	<Header logoPath="public\email.svg" />
 				<div className="stray grey">
 					<div className="container">
 						<Event/>
@@ -182,6 +215,8 @@ class HomePage extends Component {
 						</section>
 					</div>
 				</div>
+				
+				<Footer />
 			</div>
 		)
 	}

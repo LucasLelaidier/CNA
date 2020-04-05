@@ -1,29 +1,27 @@
 .memberPresentation {
-    width: 130px;
-    margin: 0px 50px 20px 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 28px;
+    background: white;
+    display: flex;
+    flex-direction: column;
 }
 
-.member-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-}
-
-.content {
-    text-align: center;
-}
-
-.content span {
-    font-size: 14px;
-    display: block;
-}
-
-.content .big {
+.memberPresentation h2 {
     font-size: 20px;
     font-weight: bold;
+    margin: 0;
 }
 
-.content .contact {
-    color: #E56B6F;
+.memberPresentation .fonction {
+    font-size: 16px;
+    margin-top: 7px;
+}
+
+.memberPresentation .mail {
+    font-size: 16px;
     font-weight: bold;
+    color: #E56B6F;
+    margin-top: 22px;
 }

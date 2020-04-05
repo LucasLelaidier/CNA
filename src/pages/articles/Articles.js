@@ -2,103 +2,56 @@ import React, { Component } from 'react'
 
 import './articles.css'
 
+import InfiniteScroll from 'components/infiniteScroll/InfiniteScroll'
+import { firstParagraph, isEmpty } from 'utility.js';
 import FeaturedArticle from 'components/article/FeaturedArticle'
+import Header from 'components/header/Header'
+import Footer from 'components/footer/Footer'
 
 class Articles extends Component {
-	constructor(props) {
-		super(props);
-
-        this.state = {
-            articles: []
-		};
-
-		this.scrolled = this.scrolled.bind(this);
-	}
-
-    loadData() {
-		return {
-			"articles": [
-				{
-					"id": 1,
-					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31708.jpg",
-					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
-				},
-				{
-					"id": 2,
-					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_33130.jpg",
-					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
-				},
-				{
-					"id": 3,
-					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31226.jpg",
-					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
-				},
-				{
-					"id": 4,
-					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_31226.jpg",
-					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
-				},
-				{
-					"id": 5,
-					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_30604.jpeg",
-					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
-				},
-				{
-					"id": 6,
-					"thumbnail" : "https://cerledesnageursavranches.fr/files/club-190503090/actualites/actualite_30604.jpeg",
-					"description" : "I have some blocks that I want to layout individually on the page, however I also want them to update wh..."
-				},
-			]
-		}
-	}
-
-	updateItems() {
-		let tempState = this.state.articles;
-		let data = this.loadData();
-
-		data["articles"].forEach(article => {
-			tempState.push(
-				<FeaturedArticle path={article.thumbnail} key={article.id}>
-					{article.description}
-				</FeaturedArticle>
-			)
-		});
-
-		this.setState({
-			articles: tempState
-		})
-	}
-	
-	scrolled(e) {
-		var scrollHeight, totalHeight;
-		scrollHeight = document.body.scrollHeight;
-		totalHeight = window.scrollY + window.innerHeight;
-
-		if(totalHeight + 50 >= scrollHeight)
-		{
-			this.updateItems();
-		}
-	}
-
-	componentDidMount() {
-		this.updateItems();
-
-		window.addEventListener('scroll', this.scrolled);
+    loadData(articlesPerPage, page, missing, callback, setLoading, setError) {
+		setLoading(true);
+		fetch(`http://localhost:3001/article?order=art_date.desc&limit=${missing > 0 ? missing : articlesPerPage}&offset=${missing > 0 ? parseFloat(articlesPerPage*page)+parseFloat(articlesPerPage-missing) : articlesPerPage*page}`)
+			.then(res => res.json())
+			.then((articles) => {
+				if(!isEmpty(articles)) {
+					let html= [];
+					Array.from(articles).forEach(article => {
+						html.push(
+							<FeaturedArticle id={article.art_id} path={article.art_thumbnail} title={article.art_titre} date={article.art_date} key={article.art_id}>
+								{firstParagraph(JSON.parse(article.art_contenu))}
+							</FeaturedArticle>
+						)
+					});
+					callback(html);
+				}
+				setLoading(false);
+			}).catch(() => {
+				setError();
+			});
 	}
 
     render() {
         return (
-            <div className="stray grey">
-                <div className="container">
-					<h1 className="centered"> Nos articles </h1>
+			<div>
+				<Header />
+				<div className="stray grey">
+					<div className="container">
+						<h1 className="centered"> Nos articles </h1>
 
-                    <section id="featured-articles">
-                        {this.state.articles}
-                    </section>
-                </div>
-            </div>
+						<section id="featured-articles">
+							<InfiniteScroll objectsPerPage="9" loadMore={this.loadData} />
+						</section>
+					</div>
+				</div>
+				<Footer />
+			</div>
         )
     }
+}
+
+Articles.defaultProps = {
+	articlesPerPage: 6,
 }
 
 export default Articles;

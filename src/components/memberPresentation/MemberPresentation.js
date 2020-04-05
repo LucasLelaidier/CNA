@@ -7,12 +7,9 @@ class MemberPresentation extends Component {
     render() {
         return (
             <div className="memberPresentation">
-                <img className="member-img" src={this.props.path} alt="member photography"/>
-                <div className="content">
-                    <span className="big name"> {this.props.name} </span>
-                    <span className="role"> {this.props.fonction} </span>
-                    <span className="contact"> {this.props.contact} </span>
-                </div>
+                <h2> {this.props.name} </h2>
+                <span className="fonction"> {this.props.fonction} </span>
+                <span className="mail"> {this.props.contact} </span>
             </div>
         )
     }

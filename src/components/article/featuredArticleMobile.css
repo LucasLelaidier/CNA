@@ -8,6 +8,11 @@
         border-radius: 12px;
     }
 
+    .article-head::after {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
     .article-foot h2 {
         text-align: center;
     }

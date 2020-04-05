@@ -1,4 +1,4 @@
-#featured-articles, #cards {
+#featured-articles, #cards, #featured-articles > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

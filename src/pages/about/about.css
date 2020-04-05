@@ -1,4 +1,17 @@
 #about .members {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1vw;
+}
+
+@media (max-width: 1194px) {
+    #about .members { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 900px) {
+    #about .members { 
+        grid-template-columns: repeat(1, 1fr); 
+    }
 }
